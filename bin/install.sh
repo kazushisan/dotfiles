@@ -5,4 +5,4 @@ set -e
 git clone https://github.com/kazushisan/dotfiles.git
 cd dotfiles
 
-./setup.sh
+./bin/setup.sh
