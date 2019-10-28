@@ -13,8 +13,6 @@ echo '      github.com/kazushisan/dotfiles'
 echo '\n'
 printf "\e[0m"
 
-exit 0
-
 echo 'linking config files...'
 
 # link vscode settings file
