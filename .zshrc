@@ -69,7 +69,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked git-st git-node
     hook_com[misc]=${gitstatus}
 }
 +vi-git-node() {
-    if [ -e "${hook_com[base]}/package.json" ]; then
+    if [ -e "${hook_com[base]}/package.json" -o -e "$PWD/package.json" ]; then
         hook_com[misc]+=" %{%F{green}%}⬢ $(node -v)%{%f%}"
     fi
 }
@@ -88,7 +88,7 @@ precmd() {
 }
 
 setopt prompt_subst
-PROMPT='%1~ %{%B%(!.%F{yellow}.%F{green})%}❯%{%f%b%} '
+PROMPT='%2~ %{%B%(!.%F{yellow}.%F{green})%}❯%{%f%b%} '
 RPROMPT='${vcs_info_msg_0_}'
 setopt HIST_IGNORE_DUPS
 
