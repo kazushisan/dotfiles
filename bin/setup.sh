@@ -13,30 +13,28 @@ echo '      github.com/kazushisan/dotfiles'
 echo '\n'
 printf "\e[0m"
 
-echo 'linking config files...'
+printf '\e[34;1;7m importing zsh settings in .zshrc and .zprofile  \e[m\n"'
 
-# link vscode settings file
+echo "source $PWD/.zprofile" >> ~/.zprofile
+echo "source $PWD/.zshrc" >> ~/.zshrc
+
+# platform specific settings
 
 if [ "$(uname)" = 'Darwin' ]; then
-    VSCODE_CONFIG="$HOME/Library/Application Support/Code/User/settings.json"
+    printf "\e[32;1;7m Detected: macOS \e[m\n"
+
+    ./setup-mac.sh
 else
-    VSCODE_CONFIG="$HOME/.config/Code/User/settings.json"
+    printf "\e[32;1;7m Detected: Linux \e[m\n" 
+
+    ./setup-linux.sh
 fi
 
-ln -sf $PWD/vscode/settings.json "$VSCODE_CONFIG"
+## Hyper / Vim
 
-# link zsh settings
-
-ln -sf $PWD/.zprofile ~/.zprofile
-ln -sf $PWD/.zshrc ~/.zshrc
-
-# link Hyper settings
+printf '\e[34;1;7m linking hyper and vim settings  \e[m\n"'
 
 ln -sf $PWD/.hyper.js ~/.hyper.js
-
-# link vim settings
-
-ln -sfF $PWD/.vim ~/.vim
 ln -sf $PWD/.vimrc ~/.vimrc
 
-printf "\e[32;1m\e[7m DONE! \e[m\n" 
+printf "\e[32;1m\e[7m DONE! \e[m\n"
