@@ -3,8 +3,7 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "workbench.startupEditor": "newUntitledFile",
-    "editor.renderControlCharacters": true,
-    "workbench.colorTheme": "Ayu One Dark Pro | Mirage Bordered",
+		"editor.renderControlCharacters": true,
     "workbench.activityBar.visible": true,
 	"window.zoomLevel": 0,
 	"breadcrumbs.enabled": true,
@@ -44,7 +43,7 @@
 	},
 	"editor.insertSpaces": false,
 	"php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-	"php-cs-fixer.lastDownload": 1571817957219,
+	"php-cs-fixer.lastDownload": 1577244061707,
 	"files.insertFinalNewline": true,
 	"vetur.useWorkspaceDependencies": true,
 	"vetur.validation.script": false,
@@ -105,5 +104,17 @@
 		"sqlite",
 		"togetter",
 		"tsukuba"
-	]
+	],
+	"customizeUI.titleBar": "inline",
+	"window.titleBarStyle": "native",
+	"customizeUI.activityBar": "wide",
+	"customizeUI.stylesheet": {
+		".monaco-workbench .activitybar": "background-color: #16161C !important",
+		".monaco-workbench .statusbar": "background-color: #16161C !important",
+		".monaco-workbench .panel > .title": "border-top-color: #16161C !important"
+	},
+	"workbench.colorTheme": "Horizon",
+	"workbench.colorCustomizations": {
+		"contrastBorder": "#16161C"
+	}
 }
