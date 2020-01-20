@@ -23,11 +23,11 @@ echo "source $PWD/.zshrc" >> ~/.zshrc
 if [ "$(uname)" = 'Darwin' ]; then
     printf "\e[32;1;7m Detected: macOS \e[m\n"
 
-    ./setup-mac.sh
+    $PWD/bin/setup-mac.sh
 else
     printf "\e[32;1;7m Detected: Linux \e[m\n" 
 
-    ./setup-linux.sh
+    $PWD/bin/setup-linux.sh
 fi
 
 ## Hyper / Vim
