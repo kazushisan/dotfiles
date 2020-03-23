@@ -32,9 +32,10 @@ fi
 
 ## Hyper / Vim
 
-printf '\e[34;1;7m linking hyper and vim settings  \e[m\n"'
+printf '\e[34;1;7m linking hyper, tmux and vim settings  \e[m\n"'
 
 ln -sf $PWD/.hyper.js ~/.hyper.js
 ln -sf $PWD/.vimrc ~/.vimrc
+ln -sf $PWD/terminal/.tmux.conf ~/.tmux.conf
 
 printf "\e[32;1m\e[7m DONE! \e[m\n"
