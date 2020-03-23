@@ -21,11 +21,11 @@ echo "source $PWD/.zshrc" >> ~/.zshrc
 # platform specific settings
 
 if [ "$(uname)" = 'Darwin' ]; then
-    printf "\e[32;1;7m Detected: macOS \e[m\n"
+    printf '\e[32;1;7m Detected: macOS \e[m\n'
 
     $PWD/bin/setup-mac.sh
 else
-    printf "\e[32;1;7m Detected: Linux \e[m\n" 
+    printf '\e[32;1;7m Detected: Linux \e[m\n'
 
     $PWD/bin/setup-linux.sh
 fi
@@ -38,4 +38,4 @@ ln -sf $PWD/.hyper.js ~/.hyper.js
 ln -sf $PWD/.vimrc ~/.vimrc
 ln -sf $PWD/terminal/.tmux.conf ~/.tmux.conf
 
-printf "\e[32;1m\e[7m DONE! \e[m\n"
+printf '\e[32;1m\e[7m DONE! \e[m\n'
