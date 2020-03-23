@@ -34,7 +34,7 @@
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1577244061707,
+  "php-cs-fixer.lastDownload": 1584801099871,
   "cSpell.enabledLanguageIds": [
     "asciidoc",
     "c",
@@ -93,7 +93,6 @@
   "customizeUI.activityBar": "wide",
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "Horizon",
   "workbench.colorCustomizations": {
     "activityBar.background": "#16161C",
     "panel.border": "#16161C",
@@ -108,5 +107,6 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.statusBar.visible": true
+  "workbench.statusBar.visible": true,
+  "workbench.colorTheme": "Horizon"
 }
