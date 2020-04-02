@@ -18,7 +18,7 @@ brew install git zsh && true
 
 ## install tools from brew
 
-brew install hugo pyenv httpie emojify go r yarn schniz/tap/fnm && true
+brew install hugo pyenv httpie emojify go r yarn schniz/tap/fnm tmux && true
 
 ## VSCode
 
