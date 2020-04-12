@@ -85,6 +85,10 @@ precmd() {
     [[ "$TERM" =~ "^xterm" ]] && {
         print -Pn "\e]0;%n@%m: %~\a"
     }
+
+    [ "$TMUX" ] && {
+        print -Pn "\033]0;%~\007"
+    }
 }
 
 setopt prompt_subst
@@ -99,7 +103,11 @@ setopt HIST_IGNORE_DUPS
 preexec() {
     [[ "$TERM" =~ "^xterm" ]] && {
         print -Pn "\e]0;$1\a"
-    }  
+    }
+
+    [ "$TMUX" ] && {
+        print -Pn "\033]0;$1\007"
+    }
 }
 
 
