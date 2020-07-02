@@ -1,0 +1,42 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "homebrew/test-bot"
+tap "schniz/tap"
+tap "github/gh"
+
+# core
+
+brew "mas"
+brew "git"
+brew "zsh"
+brew "tmux"
+
+cask "alacritty"
+cask "karabiner-elements"
+
+mas "1Password 7", id: 1333542190
+
+# language related
+
+brew "go"
+brew "pyenv"
+brew "schniz/tap/fnm"
+brew "yarn"
+
+# tools
+
+brew "unar"
+brew "httpie"
+brew "pipx"
+brew "github/gh/gh"
+
+cask "docker"
+cask "the-unarchiver"
+
+# Apps
+
+cask "visual-studio-code"
+cask "google-chrome"
+
+

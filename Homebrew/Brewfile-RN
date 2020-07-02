@@ -1,0 +1,8 @@
+# Brewfile for React Native development
+
+brew "rbenv"
+
+mas "Xcode", id: 497799835
+
+cask "android-studio"
+cask "react-native-debugger"

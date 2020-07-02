@@ -1,0 +1,9 @@
+# Brewfile for University
+
+brew "r"
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+
+cask "microsoft-teams"
+cask "mathpix-snipping-tool"
