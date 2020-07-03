@@ -9,16 +9,6 @@ if ! which brew > /dev/null; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-printf "\e[34;1;7m Installing tools... \e[m\n"
-
-## re-install system commands with brew
-
-brew install git zsh && true
-
-
-## install tools from brew
-
-brew install hugo pyenv httpie emojify go r yarn schniz/tap/fnm tmux && true
 
 ## VSCode
 
