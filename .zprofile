@@ -2,9 +2,12 @@ export LANG=en_US.UTF-8
 export PATH=$HOME/.fnm:$PATH
 export PATH=/usr/local/opt/openssl/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+
+# used by pipx
+export PATH="$PATH:/Users/kazushi/.local/bin"
 
 eval "`fnm env --multi`"
-
 
 alias pip-upgrade-all="pip list -o | tail -n +3 | awk '{ print \$1 }' | xargs pip install -U"
 

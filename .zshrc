@@ -138,3 +138,15 @@ add-zsh-hook chpwd _fnm_autoload_hook \
 
 # fnm
 eval "$(fnm env --multi)"
+
+
+#------------------------------
+# ssh-agent
+#------------------------------
+eval "$(ssh-agent -s)"
+
+
+if [ -z "$TMUX" ] && [ "$ALACRITTY" ] && [ ${UID} != 0 ]
+then
+	tmux new -A -s main
+fi
