@@ -34,7 +34,7 @@
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1588749471229,
+  "php-cs-fixer.lastDownload": 1593739737488,
   "cSpell.enabledLanguageIds": [
     "asciidoc",
     "c",
