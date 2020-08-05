@@ -12,7 +12,7 @@
 ```
 ## Usage
 
-```
+```zsh
 make help ## show list of commands
 make init ## init environment
 ```
