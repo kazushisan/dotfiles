@@ -33,19 +33,11 @@ brew_install: ## install brew if missing
 	@echo '==> installing homebrew if not installed'
 	@! which brew > /dev/null && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" ||:
 
-brew_setup: | brew_setup_base brew_setup_personal brew_setup_rn brew_setup_univ ### install packages using brew
-
-brew_setup_base:
+brew_setup: ### install packages using brew
 	@echo '==> installing base packages from brewfile'
 	@brew bundle --file=$(abspath ./brew/Brewfile)
-
-brew_setup_personal:
 	@/bin/echo -n "==> install personal packages from brewfile? [y/N] " && read ans && [ $${ans:-N} = y ] && brew bundle --file=$(abspath ./brew/Brewfile-Personal) ||:
-
-brew_setup_rn:
 	@/bin/echo -n "==> install React Native packages from brewfile? [y/N] " && read ans && [ $${ans:-N} = y ] && brew bundle --file=$(abspath ./brew/Brewfile-RN) ||:
-
-brew_setup_univ:
 	@/bin/echo -n "==> install University related packages from brewfile? [y/N] " && read ans && [ $${ans:-N} = y ] && brew bundle --file=$(abspath ./brew/Brewfile-Univ) ||:
 
 vscode_link: ## link vscode settings file
