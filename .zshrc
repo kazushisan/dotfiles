@@ -143,8 +143,7 @@ eval "$(fnm env --multi)"
 #------------------------------
 # ssh-agent
 #------------------------------
-eval "$(ssh-agent -s)"
-
+ssh-add -K
 
 if [ -z "$TMUX" ] && [ "$ALACRITTY" ] && [ ${UID} != 0 ]
 then
