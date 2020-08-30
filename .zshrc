@@ -143,7 +143,11 @@ eval "$(fnm env --multi)"
 #------------------------------
 # ssh-agent
 #------------------------------
-ssh-add -K
+if [ "$(uname)" = 'Darwin' ]; then
+    ssh-add -K
+else
+    eval "$(ssh-agent -s)"
+fi
 
 if [ -z "$TMUX" ] && [ "$ALACRITTY" ] && [ ${UID} != 0 ]
 then
