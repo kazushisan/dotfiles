@@ -122,22 +122,22 @@ fi
 #------------------------------
 # fnm
 #------------------------------
-autoload -U add-zsh-hook
-_fnm_autoload_hook () {
-if [[ -f .node-version && -r .node-version ]]; then
-    echo "fnm: Found .node-version"
-    fnm use
-elif [[ -f .nvmrc && -r .nvmrc ]]; then
-    echo "fnm: Found .nvmrc"
-    fnm use
-fi
-}
+# autoload -U add-zsh-hook
+# _fnm_autoload_hook () {
+# if [[ -f .node-version && -r .node-version ]]; then
+#     echo "fnm: Found .node-version"
+#     fnm use
+# elif [[ -f .nvmrc && -r .nvmrc ]]; then
+#     echo "fnm: Found .nvmrc"
+#     fnm use
+# fi
+# }
 
-add-zsh-hook chpwd _fnm_autoload_hook \
-&& _fnm_autoload_hook
+# add-zsh-hook chpwd _fnm_autoload_hook \
+# && _fnm_autoload_hook
 
 # fnm
-eval "$(fnm env --multi)"
+# eval "$(fnm env --multi)"
 
 
 #------------------------------

@@ -2,7 +2,6 @@ tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "homebrew/test-bot"
-tap "schniz/tap"
 tap "github/gh"
 
 # core
@@ -21,7 +20,7 @@ mas "1Password 7", id: 1333542190
 
 brew "go"
 brew "pyenv"
-brew "schniz/tap/fnm"
+brew "n" ## until fnm supports arm-based macs
 brew "yarn"
 
 # tools
