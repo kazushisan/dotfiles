@@ -20,7 +20,7 @@ mas "1Password 7", id: 1333542190
 
 brew "go"
 brew "pyenv"
-brew "n" ## until fnm supports arm-based macs
+brew "fnm"
 brew "yarn"
 
 # tools
