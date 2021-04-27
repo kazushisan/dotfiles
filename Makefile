@@ -13,8 +13,10 @@ link: ## link dotfiles to home directory
 	@echo '==> linking dotfiles to HOME'
 	@echo ''
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
-	@mkdir -p $(HOME)/.config/kitty
-	@ln -sfnv $(abspath kitty.conf) $(HOME)/.config/kitty/kitty.conf
+
+link_kitty: ## link kitty config
+	@echo '==> linking kitty config'
+	@ln -sfnv $(abspath kitty) $(HOME)/.config
 
 init: | show_title brew_install brew_setup link vscode_link vscode_setup # automatic setup of environment
 	@echo '==> linking vscode setting file'
