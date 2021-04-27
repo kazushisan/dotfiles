@@ -2,6 +2,8 @@ CANDIDATES := $(wildcard .??*)
 EXCLUSIONS := .DS_Store .git .gitignore
 DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
+CONFIG_DIRS := kitty git
+
 VSCODE_CONFIG := "$(HOME)/Library/Application Support/Code/User/settings.json"
 
 .DEFAULT_GOAL := help
@@ -14,9 +16,9 @@ link: ## link dotfiles to home directory
 	@echo ''
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
 
-link_kitty: ## link kitty config
-	@echo '==> linking kitty config'
-	@ln -sfnv $(abspath kitty) $(HOME)/.config
+link_config: ## link config under ~/.config
+	@echo '==> linking config under ~/.config'
+	@$(foreach val, $(CONFIG_DIRS), ln -sfnv $(abspath $(val)) $(HOME)/.config;)
 
 init: | show_title brew_install brew_setup link vscode_link vscode_setup # automatic setup of environment
 	@echo '==> linking vscode setting file'
