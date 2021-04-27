@@ -156,7 +156,7 @@ if [ "$(uname)" = 'Linux' ]; then
     eval "$(dircolors ~/.dircolors)"
 fi
 
-if [ -z "$TMUX" ] && [ "$ALACRITTY" ] && [ ${UID} != 0 ]
+if [ -z "$TMUX" ] && [ "$KITTY" ] && [ ${UID} != 0 ]
 then
 	tmux new -A -s main
 fi
