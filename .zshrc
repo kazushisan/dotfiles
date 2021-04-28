@@ -93,7 +93,7 @@ precmd() {
 
 setopt prompt_subst
 PROMPT='%2~ %{%B%(!.%F{yellow}.%F{green})%}❯%{%f%b%} '
-RPROMPT='${vcs_info_msg_0_}'
+RPROMPT='${vcs_info_msg_0_} $([[ $IS_ARM ]] && echo "($(uname -m))")'
 setopt HIST_IGNORE_DUPS
 
 #------------------------------
