@@ -22,7 +22,7 @@ link_config: ## link config under ~/.config
 	@$(foreach val, $(CONFIG_DIRS), ln -sfnv $(abspath $(val)) $(HOME)/.config;)
 
 init: | show_title brew_install brew_setup link vscode_link vscode_setup # automatic setup of environment
-	@echo '==> linking vscode setting file'
+	@echo '==> setup'
 
 show_title:
 	@printf "\e[34m"
@@ -37,11 +37,8 @@ show_title:
 	@printf "\e[0m"
 
 brew_setup: ### install packages using brew
-	@echo '==> installing base packages from brewfile'
-	@brew bundle --file=$(abspath ./brew/Brewfile)
-	@/bin/echo -n "==> install personal packages from brewfile? [y/N] " && read ans && [ $${ans:-N} = y ] && brew bundle --file=$(abspath ./brew/Brewfile-Personal) ||:
-	@/bin/echo -n "==> install React Native packages from brewfile? [y/N] " && read ans && [ $${ans:-N} = y ] && brew bundle --file=$(abspath ./brew/Brewfile-RN) ||:
-	@/bin/echo -n "==> install University related packages from brewfile? [y/N] " && read ans && [ $${ans:-N} = y ] && brew bundle --file=$(abspath ./brew/Brewfile-Univ) ||:
+	@echo '==> installing packages from brewfile'
+	@brew bundle --file=$(abspath ./Brewfile)
 
 vscode_link: ## link vscode settings file
 	@echo '==> linking vscode setting file'
