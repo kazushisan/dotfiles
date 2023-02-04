@@ -3,6 +3,7 @@ export PATH=$HOME/.fnm:$PATH
 export PATH=/usr/local/opt/openssl/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 
 eval $(/opt/homebrew/bin/brew shellenv)
 

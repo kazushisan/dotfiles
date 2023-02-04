@@ -1,9 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/core"
-tap "homebrew/services"
-tap "homebrew/test-bot"
-tap "github/gh"
-
 # core
 
 brew "mas"
@@ -11,7 +5,7 @@ brew "git"
 brew "zsh"
 brew "tmux"
 
-cask "alacritty"
+cask "kitty"
 cask "karabiner-elements"
 
 mas "1Password 7", id: 1333542190
@@ -28,7 +22,7 @@ brew "yarn"
 brew "unar"
 brew "httpie"
 brew "pipx"
-brew "github/gh/gh"
+brew "gh"
 
 cask "docker"
 cask "the-unarchiver"

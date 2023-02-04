@@ -1,7 +1,6 @@
 {
   "editor.wordWrap": "on",
   "editor.renderControlCharacters": true,
-  "window.zoomLevel": 0,
   "breadcrumbs.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "files.insertFinalNewline": true,
@@ -9,7 +8,7 @@
   "editor.tabSize": 2,
   "[python]": {
     "editor.insertSpaces": true,
-    "editor.tabSize": 4  
+    "editor.tabSize": 4
   },
   "eslint.packageManager": "yarn",
   "emmet.includeLanguages": {
@@ -21,10 +20,10 @@
   "python.linting.flake8Enabled": true,
   "javascript.format.enable": false,
   "[json]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
@@ -34,7 +33,7 @@
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1593739737488,
+  "php-cs-fixer.lastDownload": 1641964265515,
   "cSpell.enabledLanguageIds": [
     "asciidoc",
     "c",
@@ -87,29 +86,20 @@
     "sohosai",
     "sqlite",
     "togetter",
-    "tsukuba"
+    "tsukuba",
+    "titlebar",
+    "karte",
+    "navi",
+    "baito",
+    "sukimani",
   ],
   "customizeUI.titleBar": "inline",
-  "window.titleBarStyle": "native",
-  "customizeUI.activityBar": "wide",
+  "customizeUI.activityBar": "regular",
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": true,
-  "workbench.colorCustomizations": {
-    "activityBar.background": "#16161C",
-    "panel.border": "#16161C",
-    "contrastBorder": "#16161C"
-  },
-  "customizeUI.stylesheet": {
-    ".monaco-workbench:not(.nostatusbar) .activitybar": "height: calc(100% + 22px);",
-    ".monaco-workbench:not(.nostatusbar) .activitybar .global-activity": "margin-bottom: -22px;",
-    ".monaco-workbench .statusbar": "padding-right: 77px;",
-    ".monaco-workbench  > div.monaco-grid-view > div > div > div.split-view-container > div:nth-child(3)": "margin-left: 77px;"
-  },
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.statusBar.visible": true,
-  "workbench.colorTheme": "Horizon",
+  "workbench.colorTheme": "One Dark Pro Darker",
   "python.linting.flake8Path": "/Users/kazushi/.local/bin/flake8",
   "python.formatting.autopep8Path": "/Users/kazushi/.local/bin/autopep8",
   "dart.debugExternalLibraries": true,
@@ -120,5 +110,19 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "tabnine.experimentalAutoImports": true
+  "tabnine.experimentalAutoImports": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "files.associations": {
+    "*.tt": "html"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  "git.mergeEditor": false,
+  "terminal.integrated.tabs.enabled": false,
+  "eslint.format.enable": true
 }

@@ -4,7 +4,8 @@ DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
 CONFIG_DIRS := kitty git
 
-VSCODE_CONFIG := "$(HOME)/Library/Application Support/Code/User/settings.json"
+VSCODE_CONFIG_DIR := "$(HOME)/Library/Application\ Support/Code/User"
+VSCODE_CONFIG := "$(VSCODE_CONFIG_DIR)/settings.json"
 
 .DEFAULT_GOAL := help
 
@@ -35,10 +36,6 @@ show_title:
 	@echo ''
 	@printf "\e[0m"
 
-brew_install: ## install brew if missing
-	@echo '==> installing homebrew if not installed'
-	@! which brew > /dev/null && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" ||:
-
 brew_setup: ### install packages using brew
 	@echo '==> installing base packages from brewfile'
 	@brew bundle --file=$(abspath ./brew/Brewfile)
@@ -48,6 +45,7 @@ brew_setup: ### install packages using brew
 
 vscode_link: ## link vscode settings file
 	@echo '==> linking vscode setting file'
+	@mkdir -p $(VSCODE_CONFIG_DIR)
 	@ln -sfnv $(abspath ./vscode/settings.json) $(VSCODE_CONFIG)
 
 vscode_setup: ## install vscode extensions

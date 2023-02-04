@@ -144,7 +144,7 @@ eval "$(fnm env)"
 # ssh-agent
 #------------------------------
 if [ "$(uname)" = 'Darwin' ]; then
-    ssh-add -K
+    ssh-add --apple-use-keychain
 else
     eval "$(ssh-agent -s)"
 fi
