@@ -6,11 +6,6 @@
   "files.insertFinalNewline": true,
   "editor.insertSpaces": false,
   "editor.tabSize": 2,
-  "[python]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4
-  },
-  "eslint.packageManager": "yarn",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "vue-html": "html"
@@ -32,8 +27,6 @@
   "vetur.validation.script": false,
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
-  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1641964265515,
   "cSpell.enabledLanguageIds": [
     "asciidoc",
     "c",
@@ -80,8 +73,6 @@
     "baito",
     "sukimani"
   ],
-  "customizeUI.titleBar": "inline",
-  "customizeUI.activityBar": "regular",
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": true,
   "workbench.startupEditor": "newUntitledFile",
@@ -89,8 +80,6 @@
   "workbench.colorTheme": "One Dark Pro Darker",
   "python.linting.flake8Path": "/Users/kazushi/.local/bin/flake8",
   "python.formatting.autopep8Path": "/Users/kazushi/.local/bin/autopep8",
-  "dart.debugExternalLibraries": true,
-  "dart.debugSdkLibraries": false,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
