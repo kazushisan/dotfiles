@@ -12,16 +12,12 @@ mas "1Password 7", id: 1333542190
 
 # language related
 
-brew "go"
-brew "pyenv"
 brew "fnm"
 brew "yarn"
 
 # tools
 
 brew "unar"
-brew "httpie"
-brew "pipx"
 brew "gh"
 
 cask "docker"
