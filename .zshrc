@@ -7,6 +7,13 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt auto_cd
 
+# znap
+
+[[ -r ~/.znap/znap/znap.zsh ]] || \
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/.znap/znap
+
+source ~/.znap/znap/znap.zsh
+
 # history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
@@ -17,16 +24,10 @@ setopt share_history
 setopt hist_no_store
 setopt hist_reduce_blanks
 
-# auto complete
-autoload -Uz compinit
-compinit -u
-
-setopt complete_in_word
-
-zstyle ':completion:*' list-colors "${LS_COLORS}"
-zstyle ':completion:*:default' menu select
-zstyle ':completion::complete:*' use-cache
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# autocomplete
+znap source marlonrichert/zsh-autocomplete
+bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 
 # git
 autoload -Uz vcs_info
