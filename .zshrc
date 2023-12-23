@@ -29,8 +29,7 @@ znap source marlonrichert/zsh-autocomplete
 bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 
-zplug "lukechilds/zsh-better-npm-completion", defer:2
-
+znap source lukechilds/zsh-better-npm-completion
 # git
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
