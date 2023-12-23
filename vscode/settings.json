@@ -1,104 +1,39 @@
 {
   "editor.wordWrap": "on",
   "editor.renderControlCharacters": true,
-  "breadcrumbs.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "files.insertFinalNewline": true,
-  "editor.insertSpaces": false,
-  "editor.tabSize": 2,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "vue-html": "html"
   },
-  "python.venvPath": "~/.local/share/virtualenvs",
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true,
   "javascript.format.enable": false,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "vetur.useWorkspaceDependencies": true,
-  "vetur.validation.script": false,
-  "go.formatTool": "goimports",
-  "go.useLanguageServer": true,
-  "cSpell.enabledLanguageIds": [
-    "asciidoc",
-    "c",
-    "cpp",
-    "csharp",
-    "css",
-    "git-commit",
-    "go",
-    "handlebars",
-    "haskell",
-    "html",
-    "jade",
-    "java",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "jsonc",
-    "latex",
-    "less",
-    "markdown",
-    "php",
-    "plaintext",
-    "pug",
-    "python",
-    "restructuredtext",
-    "ruby",
-    "rust",
-    "scala",
-    "scss",
-    "sql",
-    "text",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "vue-html",
-    "yaml",
-    "yml"
-  ],
-  "cSpell.userWords": [
-    "sqlite",
-    "titlebar",
-    "karte",
-    "navi",
-    "baito",
-    "sukimani"
-  ],
-  "workbench.sideBar.location": "left",
-  "workbench.activityBar.visible": true,
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.statusBar.visible": true,
-  "workbench.colorTheme": "One Dark Pro Darker",
-  "python.linting.flake8Path": "/Users/kazushi/.local/bin/flake8",
-  "python.formatting.autopep8Path": "/Users/kazushi/.local/bin/autopep8",
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "tabnine.experimentalAutoImports": true,
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "files.associations": {
-    "*.tt": "html"
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "telemetry.telemetryLevel": "off",
+  "eslint.format.enable": true,
   "terminal.integrated.shellIntegration.decorationsEnabled": "never",
-  "git.mergeEditor": false,
   "terminal.integrated.tabs.enabled": false,
-  "eslint.format.enable": true
+  "tabnine.experimentalAutoImports": true
 }
