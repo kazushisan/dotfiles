@@ -30,8 +30,8 @@ compinit -u
 setopt complete_in_word
 
 zstyle ':completion:*' list-colors "${LS_COLORS}"
-zstyle ':completion:*:default' menu select=1
-zstyle ':completion::complete:*' use-cache true
+zstyle ':completion:*:default' menu select
+zstyle ':completion::complete:*' use-cache
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 #------------------------------
