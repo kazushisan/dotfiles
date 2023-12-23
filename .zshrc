@@ -7,7 +7,6 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt auto_cd
 
-
 #------------------------------
 # History
 #------------------------------
@@ -109,15 +108,6 @@ preexec() {
         print -Pn "\033]0;$1\007"
     }
 }
-
-
-#------------------------------
-# Python
-#------------------------------
-if which pyenv > /dev/null; then
-    eval "$(pyenv init -)";
-fi
-
 
 # ------------------------------
 # fnm
