@@ -44,6 +44,12 @@ fi
 znap source zsh-users/zsh-autosuggestions
 znap source lukechilds/zsh-better-npm-completion
 
+# substring search 
+znap source zsh-users/zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
+
 # git
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
