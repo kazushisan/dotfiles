@@ -7,10 +7,7 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt auto_cd
 
-#------------------------------
-# History
-#------------------------------
-
+# history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -20,10 +17,7 @@ setopt share_history
 setopt hist_no_store
 setopt hist_reduce_blanks
 
-#------------------------------
-# Auto Complete
-#------------------------------
-
+# auto complete
 autoload -Uz compinit
 compinit -u
 
@@ -34,10 +28,7 @@ zstyle ':completion:*:default' menu select
 zstyle ':completion::complete:*' use-cache
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-#------------------------------
-# Git Info
-#------------------------------
-
+# git
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' check-for-changes true
@@ -73,11 +64,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked git-st git-node
     fi
 }
 
-
-#------------------------------
-# Prompt
-#------------------------------
-
+# prompt
 precmd() {
     vcs_info
 
@@ -95,10 +82,7 @@ PROMPT='%2~ %{%B%(!.%F{yellow}.%F{green})%}❯%{%f%b%} '
 RPROMPT='${vcs_info_msg_0_} $([[ $IS_ARM ]] && echo "($(uname -m))")'
 setopt HIST_IGNORE_DUPS
 
-#------------------------------
-# Window Title
-#------------------------------
-
+# window title
 preexec() {
     [[ "$TERM" =~ "^xterm" ]] && {
         print -Pn "\e]0;$1\a"
@@ -109,9 +93,7 @@ preexec() {
     }
 }
 
-# ------------------------------
 # fnm
-# ------------------------------
 autoload -U add-zsh-hook
 _fnm_autoload_hook () {
 if [[ -f .node-version && -r .node-version ]]; then
@@ -129,23 +111,19 @@ add-zsh-hook chpwd _fnm_autoload_hook \
 # fnm
 eval "$(fnm env)"
 
-
-#------------------------------
-# ssh-agent
-#------------------------------
+# ssh
 if [ "$(uname)" = 'Darwin' ]; then
     ssh-add --apple-use-keychain
 else
     eval "$(ssh-agent -s)"
 fi
 
-#------------------------------
 # dir colors
-#------------------------------
 if [ "$(uname)" = 'Linux' ]; then
     eval "$(dircolors ~/.dircolors)"
 fi
 
+# start tmux
 if [ -z "$TMUX" ] && [ "$KITTY" ] && [ ${UID} != 0 ]
 then
 	tmux new -A -s main
