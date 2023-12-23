@@ -35,5 +35,8 @@
   "eslint.format.enable": true,
   "terminal.integrated.shellIntegration.decorationsEnabled": "never",
   "terminal.integrated.tabs.enabled": false,
-  "tabnine.experimentalAutoImports": true
+  "tabnine.experimentalAutoImports": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

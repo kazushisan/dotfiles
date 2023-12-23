@@ -24,12 +24,26 @@ setopt share_history
 setopt hist_no_store
 setopt hist_reduce_blanks
 
-# autocomplete
-znap source marlonrichert/zsh-autocomplete
-bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
-bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+# auto complete
+autoload -Uz compinit
+compinit -u
 
+setopt complete_in_word
+
+zstyle ':completion:*' list-colors "${LS_COLORS}"
+zstyle ':completion:*:default' menu select
+zstyle ':completion::complete:*' use-cache
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+if [[ "$KITTY" ]] then
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#959798"
+elif [[ "$VSCODE_INJECTION" ]] then
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7f848e"
+fi
+
+znap source zsh-users/zsh-autosuggestions
 znap source lukechilds/zsh-better-npm-completion
+
 # git
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
