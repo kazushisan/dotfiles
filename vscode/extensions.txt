@@ -1,9 +1,5 @@
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
-golang.go
-ms-python.python
 qezhu.gitlink
 streetsidesoftware.code-spell-checker
 styled-components.vscode-styled-components
-TabNine.tabnine-vscode
-zhuangtongfa.material-theme
