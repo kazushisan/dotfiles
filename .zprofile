@@ -11,9 +11,3 @@ if [ "$(uname)" = 'Darwin' ]; then
 else
     alias ls='ls --color=auto'
 fi
-
-if [[ "$(sysctl -n machdep.cpu.brand_string)" == "Apple"* ]]; then
-    export IS_ARM=1
-else
-    export IS_ARM=0
-fi
