@@ -41,7 +41,7 @@ zstyle ':completion::complete:*' use-cache
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 if [[ "$TERM_PROGRAM" = "rio" ]] then
-    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#959798"
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#616e88"
 elif [[ "$VSCODE_INJECTION" ]] then
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7f848e"
 fi
