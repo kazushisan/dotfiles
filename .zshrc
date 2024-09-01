@@ -24,6 +24,10 @@ setopt share_history
 setopt hist_no_store
 setopt hist_reduce_blanks
 
+## time
+
+TIMEFMT=$'elapsed\t%*E\nuser\t%*U\nsystem\t%*S'
+
 # auto complete
 autoload -Uz compinit
 compinit -u
