@@ -10,7 +10,7 @@ cursor = '▇'
 #
 # Default is true
 #
-blinking-cursor = false
+blinking-cursor = true
 
 # Hide the cursor while typing
 #
@@ -34,12 +34,16 @@ blinking-cursor = false
 # Example:
 # theme = "dracula"
 
+theme = 'nord'
+
 # Padding-x
 #
 # define x axis padding (default is 0)
 #
 # Example:
 # padding-x = 10
+
+padding-x = 8
 
 # Padding-y
 #
@@ -218,6 +222,10 @@ blinking-cursor = false
 # style = "italic"
 # weight = 800
 
+[fonts]
+size = 12
+family = "Menlo"
+
 # Scroll
 #
 # You can change how many lines are scrolled each time by setting this option.
@@ -255,6 +263,9 @@ blinking-cursor = false
 # hide-if-single = true
 # use-current-path = false
 # color-automation = []
+
+[navigation]
+mode = "Plain"
 
 # Shell
 #
