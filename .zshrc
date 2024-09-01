@@ -6,6 +6,7 @@ setopt no_tify
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt auto_cd
+setopt interactivecomments
 
 # znap
 
