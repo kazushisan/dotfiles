@@ -39,7 +39,7 @@ zstyle ':completion:*:default' menu select
 zstyle ':completion::complete:*' use-cache
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-if [[ "$KITTY" ]] then
+if [[ "$TERM_PROGRAM" = "rio" ]] then
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#959798"
 elif [[ "$VSCODE_INJECTION" ]] then
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7f848e"
@@ -150,7 +150,7 @@ if [ "$(uname)" = 'Linux' ]; then
 fi
 
 # start tmux
-if [ -z "$TMUX" ] && [ "$KITTY" ] && [ ${UID} != 0 ]
+if [ -z "$TMUX" ] && [ "$TERM_PROGRAM" = "rio" ] && [ ${UID} != 0 ]
 then
 	tmux new -A -s main
 fi
