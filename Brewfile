@@ -5,15 +5,12 @@ brew "git"
 brew "zsh"
 brew "tmux"
 
-cask "kitty"
+cask "rio"
 cask "karabiner-elements"
-
-mas "1Password 7", id: 1333542190
 
 # language related
 
 brew "fnm"
-brew "yarn"
 
 # tools
 
