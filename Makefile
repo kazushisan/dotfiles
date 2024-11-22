@@ -13,7 +13,7 @@ link: ## link config
 	@echo '==> linking config'
 	@echo ''
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
-	@$(foreach val, $(CONFIG_DIRS), ln -sfnv $(abspath $(val)) $(HOME)/.config;)
+	@$(foreach val, $(CONFIG_DIRS), ln -sfnv $(abspath $(val)) $(HOME)/.config/$(val);)
 
 brew_install: ### install packages using brew
 	@echo '==> installing packages from brewfile'
