@@ -2,7 +2,7 @@ CANDIDATES := $(wildcard .??*)
 EXCLUSIONS := .DS_Store .git .gitignore
 DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
-CONFIG_DIRS := rio git
+CONFIG_DIRS := rio git ghostty
 
 VSCODE_CONFIG_DIR := "$(HOME)/Library/Application\ Support/Code/User"
 VSCODE_CONFIG := "$(VSCODE_CONFIG_DIR)/settings.json"
